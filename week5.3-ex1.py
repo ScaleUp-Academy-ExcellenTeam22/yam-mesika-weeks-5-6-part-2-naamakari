@@ -34,5 +34,6 @@ def perfect_number_dividing() -> Generator:
 
 if __name__ == '__main__':
     generator = perfect_number_dividing()
-    [print(next(generator)) for _ in range(10)]
+    while True:
+        print(next(generator))
 
