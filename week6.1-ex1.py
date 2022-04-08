@@ -29,7 +29,7 @@ def create_set_from_file() -> Set:
 def average_runtime(words: Iterable) -> float:
     """
     The function calculates the average time to search a word in the list/set received multiple times.
-    :param words: The list or the search to search in.
+    :param words: The list or the set to search in.
     :return: The average time that take to search the current word several times.
     """
     total_time = 0.0
