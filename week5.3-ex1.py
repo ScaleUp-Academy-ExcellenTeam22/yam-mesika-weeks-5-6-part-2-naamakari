@@ -4,8 +4,8 @@ from collections.abc import Generator
 
 def perfect_number_dividing() -> Generator:
     """
-    The function find all the perfect numbers.
-    Perfect number is a number that equal to the sum of its divisors.
+    The function finds all the perfect numbers.
+    A perfect number is a number that is equal to the sum of its divisors.
     :return: Generator, iterator that the callee function can pass over its elements
      even when it does not have them all.
     """
@@ -23,13 +23,9 @@ def perfect_number_dividing() -> Generator:
                 divider += 1
         if divisors_sum == current_number:
             yield current_number
-            current_number += 1
-            divider = 2
-            divisors_sum = 1
-        else:
-            current_number += 1
-            divider = 2
-            divisors_sum = 1
+        current_number += 1
+        divider = 2
+        divisors_sum = 1
 
 
 if __name__ == '__main__':
