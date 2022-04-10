@@ -8,7 +8,7 @@ times_to_search = 1000
 
 def create_list_from_file() -> List:
     """
-    The function open the file and create list of the words that it contains.
+    The function opens the file and creates a list of the words that it contains.
     :return: The created list.
     """
     with open(WORDS_FILE_PATH, 'r') as words:
@@ -18,7 +18,7 @@ def create_list_from_file() -> List:
 
 def create_set_from_file() -> Set:
     """
-    The function open the file and create set of the words that it contains.
+    The function opens the file and creates a set of the words that it contains.
     :return: The created set.
     """
     with open(WORDS_FILE_PATH, 'r') as words:
@@ -28,12 +28,12 @@ def create_set_from_file() -> Set:
 
 def average_runtime(words: Iterable) -> float:
     """
-    The function calculates the average time to search a word in the list/set received multiple times.
+    The function calculates the average time to search a word in the received list/set.
     :param words: The list or the set to search in.
-    :return: The average time that take to search the current word several times.
+    :return: The average time that it takes to search the current word.
     """
     total_time = 0.0
-    for _ in range(times_to_search):
+    for index in range(times_to_search):
         start_time = time()
         words.__contains__(word_to_search)
         end_time = time()
