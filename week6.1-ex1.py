@@ -33,7 +33,7 @@ def average_runtime(words: Iterable) -> float:
     :return: The average time that it takes to search the current word.
     """
     total_time = 0.0
-    for index in range(times_to_search):
+    for _ in range(times_to_search):
         start_time = time()
         words.__contains__(word_to_search)
         end_time = time()
